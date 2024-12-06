@@ -17,12 +17,12 @@ class weapon
 
     public function getWeaponInfo()
 {
-   echo "Het wapen {$this->name} doet {$this->damage} schade en heeft een {$this->range} bereik.";
+   echo "Het wapen {$this->name} doet {$this->damage} schade en heeft een {$this->range} bereik. <br>";
 }
 
 }
 
-$axe = new weapon('axe', 20, 2);
-
-$axe->getWeaponInfo();
+//$axe = new weapon('axe', 20, 2);
+//
+//$axe->getWeaponInfo();
 
