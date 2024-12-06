@@ -5,6 +5,7 @@ class Character
     public string $name;
     public int $health;
     public int $power;
+    public array $weapons = [];
 
     public function __construct(string $name, int $health, int $power)
     {
@@ -38,14 +39,38 @@ class Character
 
 
 
-    public function attack(): void
+    public function attack(): string
     {
-        echo "de character $this->name valt aan met kracht van $this->power <br> ";
+        return "Knight heeft de volgende wapens:  <br>";
     }
+
+    public function archerattack(): string
+    {
+        return "archer heeft de volgende wapens:  <br>";
+    }
+
 
     public function name(): void
     {
         echo "de character is $this->name <br> ";
+    }
+
+    public function addWeapon(Weapon $weapon): void
+    {
+        $this->weapons[] = $weapon;
+    }
+
+    public function getWeapons(): array
+    {
+        return $this->weapons;
+    }
+
+    public function listweapons(): void
+    {
+        foreach ($this->weapons as $weapon)
+        {
+            echo $weapon->getWeaponInfo();
+        }
     }
 
 }
