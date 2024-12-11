@@ -16,6 +16,7 @@ class Character
     }
 
 
+
     public function getname():string
     {
         return $this->name;

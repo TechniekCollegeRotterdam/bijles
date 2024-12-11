@@ -7,7 +7,7 @@ class weapon
     public int $damage;
     public int $range;
 
-    public function __construct($name, $damage, $range)
+    public function __construct(string $name, int $damage, int $range)
     {
         $this->name = $name;
         $this->damage = $damage;
@@ -15,9 +15,9 @@ class weapon
 
     }
 
-    public function getWeaponInfo()
+    public function getWeaponInfo() : string
 {
-   echo "Het wapen {$this->name} doet {$this->damage} schade en heeft een {$this->range} bereik. <br>";
+   return "Het wapen {$this->name} doet {$this->damage} schade en heeft een {$this->range} bereik. <br>";
 }
 
 }
