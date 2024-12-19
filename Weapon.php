@@ -3,9 +3,10 @@
 class weapon
 {
 
-    public string $name;
-    public int $damage;
-    public int $range;
+    private string $name;
+    private int $damage;
+    private int $range;
+
 
     public function __construct(string $name, int $damage, int $range)
     {
@@ -13,12 +14,19 @@ class weapon
         $this->damage = $damage;
         $this->range = $range;
 
+
     }
 
     public function getWeaponInfo() : string
 {
    return "Het wapen {$this->name} doet {$this->damage} schade en heeft een {$this->range} bereik. <br>";
 }
+
+public function getdamage(): int
+{
+    return $this->damage;
+}
+
 
 }
 
